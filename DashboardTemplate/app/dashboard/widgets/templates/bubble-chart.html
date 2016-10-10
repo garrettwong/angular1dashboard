@@ -1,0 +1,9 @@
+﻿<section>
+    <h5 class="widget-title">{{directiveData.name}}</h5>
+    <div class="fs-36 fw-600 mb-20 counter">{{directiveData.type }}</div>
+
+    <canvas id="base"
+            class="chart-bubble"
+            chart-data="directiveData.data"
+            chart-series="directiveData.series"></canvas>
+</section>

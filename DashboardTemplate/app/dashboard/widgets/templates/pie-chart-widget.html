@@ -1,0 +1,26 @@
+﻿<section>
+    <h5 class="widget-title">{{directiveData.name}}</h5>
+    <div class="fs-36 fw-600 mb-20 counter">{{directiveData.info.toLocaleString()}}</div>
+
+    <div easypiechart
+         options="directiveData.options"
+         percent="directiveData.percent"
+         style="position: relative;">
+
+        <div class="chart-centered">
+            <i class="fa fa-2x {{directiveData.faIcon}}"></i>
+            <div>{{directiveData.percent}}%</div>
+        </div>
+    </div>
+
+    <div class="clearfix mt-20">
+        <div class="pull-left">
+            <div class="fs-12">Today</div>
+            <div class="text-success">+2.43%</div>
+        </div>
+        <div class="pull-right">
+            <div class="fs-12">Yesterday</div>
+            <div class="text-danger">-1.02%</div>
+        </div>
+    </div>
+</section>

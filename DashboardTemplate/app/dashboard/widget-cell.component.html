@@ -1,0 +1,33 @@
+﻿<div class="widget text-center">
+    <div class="widget-body">
+        <div class="clearfix">
+            <div class="pull-left">
+                <a href="javascript:;" class="widget-reload">
+                    <i class="fa fa-arrows"></i>
+                </a>
+            </div>
+
+            <div class="pull-right">
+                <a href="javascript:;" title="settings" ng-click="model.openSettings(widget)">
+                    <i class="fa fa-cog"></i>
+                </a>
+
+                <a href="javascript:;" class="widget-remove" ng-click="model.remove(model.widget)">
+                    <i class="fa fa-trash"></i>
+                </a>
+            </div>
+        </div>
+
+
+        <!--
+            change this to a template conditional:
+            dynamic directive load:
+            http://stackoverflow.com/questions/23556398/how-to-dynamically-load-directive-into-page
+        -->
+        <!-- Widget -->
+        <widget-content directive-name="model.widget.directiveName"
+                        directive-data="model.widget"
+                        ng-if="model.widget.directiveName"></widget-content>
+
+    </div>
+</div>

@@ -1,0 +1,25 @@
+﻿/* testing */
+div.package {
+    position: absolute;
+    margin: 20px;
+    width: 240px;
+}
+
+.dashGrid {
+    min-height: 325px;
+}
+.dashGrid {
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+}
+.dashGrid li:first-child {
+    margin-left:0;
+}
+
+widget-panel .panel-body {
+    height: 260px;
+}
+

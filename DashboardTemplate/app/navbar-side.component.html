@@ -1,0 +1,62 @@
+﻿<div class="side-menu sidebar-inverse">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="side-menu-container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <div class="icon fa fa-anchor"></div>
+
+                    <div class="title">
+                        {{ model.title }}
+                    </div>
+                </a>
+                <button type="button" class="navbar-expand-toggle pull-right visible-xs">
+                    <i class="fa fa-times icon"></i>
+                </button>
+            </div>
+
+            <ul class="nav navbar-nav">
+                <li class="panel panel-default nav-item">
+                    <a href="~/Home/Index">
+                        <span class="icon fa fa-home"></span>
+                        <span class="title">Home</span>
+                    </a>
+                </li>
+
+                <li class="panel panel-default nav-item">
+                    <a href="~/haha">
+                        <span class="icon fa fa-chain-broken"></span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li class="panel panel-default dropdown nav-item">
+                    <a data-toggle="collapse" href="#admin">
+                        <span class="icon fa fa-cogs"></span>
+                        <span class="title">Admin</span>
+                    </a>
+                    <!-- Dropdown level 1 -->
+                    <div id="admin" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <ul class="nav navbar-nav">
+                                <li>
+                                    <a href="~/Admin/Index">
+                                        <i class="icon fa fa-info-circle"></i>
+                                        Settings
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="~/Admin/Users">
+                                        <i class="icon fa fa-plus-square-o"></i>
+                                        User
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+</div>

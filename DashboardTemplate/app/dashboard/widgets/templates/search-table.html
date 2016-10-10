@@ -1,0 +1,40 @@
+﻿<section>
+    <h5 class="widget-title">{{directiveData.name}}</h5>
+    <div class="fs-36 fw-600 mb-20 counter">{{directiveData.info.toLocaleString()}}</div>
+
+    <input type="text" ng-model="searchTerm" />
+    <button ng-click="update(searchTerm)">Search</button>
+
+    <table class="table">
+
+        <thead>
+            <tr>
+                <th>*</th>
+                <th ng-repeat="header in directiveData.headers">{{header}}</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr ng-repeat="row in directiveData.rows track by $index">
+                <th scope="row">
+                    <i class="fa fa-user-secret"></i>
+                </th>
+
+                <td ng-repeat="cell in row">
+                    {{cell}}
+
+                    PieChart
+
+                    <pie-chart-widget />
+                    <pie-chart />
+
+                    <span ng-show="isNumber(cell)"
+                          style="{{cell > 0 ? 'color:green' : 'color:red' }}">
+                        {{cell.toFixed(2) + "%"}}
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</section>

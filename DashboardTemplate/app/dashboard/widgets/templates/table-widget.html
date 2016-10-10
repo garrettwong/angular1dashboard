@@ -1,0 +1,22 @@
+﻿<section>
+    <h5 class="widget-title">{{directiveData.name}}</h5>
+    <div class="fs-36 fw-600 mb-20 counter">{{directiveData.info.toLocaleString()}}</div>
+
+    <table class="table">
+
+        <thead>
+            <tr>
+                <th>#</th>
+                <th ng-repeat="header in directiveData.headers">{{header}}</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr ng-repeat="row in directiveData.rows track by $index">
+                <th scope="row">{{$index+1}}</th>
+                <td ng-repeat="cell in row">{{cell}}</td>
+            </tr>
+        </tbody>
+
+    </table>
+</section>

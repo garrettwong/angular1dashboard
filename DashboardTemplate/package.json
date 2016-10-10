@@ -1,0 +1,45 @@
+{
+  "name": "dashboardtemplate",
+  "version": "1.0.0",
+  "description": "dashboard template",
+  "main": "app/index.html",
+  "scripts": {
+    "test": "karma start",
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.hgst.com/ddt-web/dashboardtemplate"
+  },
+  "keywords": [
+    "dashboard",
+    "template"
+  ],
+  "author": "garrettwong",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-mocks": "^1.5.8",
+    "autoprefixer": "^6.5.0",
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.16.0",
+    "chai": "^3.4.0",
+    "chart.js": "^2.3.0",
+    "copy-webpack-plugin": "^3.0.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "html-webpack-plugin": "^2.22.0",
+    
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.3",
+    "karma-jasmine": "^0.3.8",
+    
+    "lite-server": "^2.2.2",
+    "mocha": "^2.3.0",
+    "raw-loader": "^0.5.1",
+    "require": "^2.4.20",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2"
+  }
+}

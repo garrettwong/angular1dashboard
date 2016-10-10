@@ -1,0 +1,44 @@
+﻿.widget {
+    margin-bottom: 24px;
+    border: 1px solid #e6e6e6;
+    color: #737373;
+}
+
+.widget-body {
+    padding: 20px;
+}
+
+.widget-title {
+    font-weight: 600;
+}
+
+.fs-36 {
+    font-size: 36px;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.chart-centered {
+    position: absolute;
+    top: 33%;
+    width: 100%;
+}
+
+.widget {
+    box-shadow: 4px 4px 4px #ccc;
+    overflow-y: scroll;
+}
+
+widget-content section {
+    min-height: 270px;
+}
+
+.widget {
+    height: 100%;
+}
+
+    .widget .widget-body {
+        height: 100%;
+    }

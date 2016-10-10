@@ -1,0 +1,14 @@
+﻿<section>
+    <h5 class="widget-title">{{directiveData.name}}</h5>
+    <div class="fs-36 fw-600 mb-20 counter">{{directiveData.info.toLocaleString()}}</div>
+
+    <canvas id="line" 
+            class="chart chart-line" 
+            chart-data="directiveData.data"
+            chart-labels="directiveData.labels" 
+            chart-series="directiveData.series" 
+            chart-options="directiveData.options"
+            chart-dataset-override="directiveData.datasetOverride" 
+            chart-click="directiveData.onClick"></canvas> 
+
+</section>

@@ -1,0 +1,46 @@
+﻿<div class="modal-body">
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <ul class="list-group">
+
+                <li class="list-group-item" ng-repeat="widget in widgets">
+
+                    <div class="row bottom-buffer-20">
+                        <div class="col-xs-4 col-sm-3 col-md-3 top-buffer-10" align="right">
+                            <img src="{{widget.imageUrl}}"
+                                 style="min-height: 103px;"
+                                 class="img-thumbnail gadgetThumb"
+                                 alt="{{title}}">
+                        </div>
+
+                        <div class="col-xs-8 col-sm-8 col-md-8">
+                            <a href="http://www.igoogleportal.com/mypage/directory.php?type=gadget&amp;category=all&amp;tabid=1&amp;query=&amp;gadgetid=1673&amp;page=1">
+                                <h4>{{widget.title}}</h4>
+                            </a>
+
+                            <p class="top-buffer-5">{{widget.description}}</p>
+
+                            <button type="button"
+                                    class="btn btn-default btn-sm"
+                                    ng-click="addWidget(widget.widgetDirectiveName);"
+                                    id="applyButton">
+                                Add Widget
+                            </button>
+                        </div>
+                    </div>
+
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal-footer">
+    <md-button class="md-raised md-primary"
+               ng-click="cancel()">Save</md-button>
+
+    <md-button class="md-raised"
+               ng-click="cancel()">Cancel</md-button>
+</div>

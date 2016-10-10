@@ -1,0 +1,27 @@
+﻿<section>
+    <h5 class="widget-title">{{directiveData.name}}</h5>
+
+    <form class="form-inline" style="height: 51px;">
+        <div class="form-group">
+            <div class="input-group">
+                <input type="text" class="form-control" ng-model="jobId" placeholder="Job ID" />
+
+                <div class="input-group-addon"
+                     ng-click="update(jobId)">
+                    <i class="fa fa-search"></i>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div easypiechart
+         options="directiveData.options"
+         percent="directiveData.percent"
+         style="position: relative;">
+
+        <div class="chart-centered">
+            <i class="fa fa-2x {{directiveData.faIcon}}"></i>
+            <div>{{directiveData.percent}}%</div>
+        </div>
+    </div>
+</section>

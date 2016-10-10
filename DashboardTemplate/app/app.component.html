@@ -1,0 +1,20 @@
+﻿<div class="app-container {{ model.navbarSideExpanded }}">
+    <div class="row content-container">
+
+        <navbar-top navbar-side-expanded="model.navbarSideExpanded" 
+                    on-view-change="model.navbarSideExpanded = $event.navbarSideExpanded">
+        </navbar-top>
+
+        <navbar-side></navbar-side>
+
+        <div class="container-fluid">
+            <div class="side-body">
+
+                <!-- Main Content -->
+                <main-view></main-view>
+
+            </div>
+        </div>
+
+    </div>
+</div>

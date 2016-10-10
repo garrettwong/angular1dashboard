@@ -1,0 +1,10 @@
+﻿<section>
+    <h5 class="widget-title">{{directiveData.name}}</h5>
+    <div class="fs-36 fw-600 mb-20 counter">{{directiveData.type }}</div>
+    
+    <canvas id="polar-area" 
+            class="chart chart-polar-area"
+            chart-data="directiveData.data" 
+            chart-labels="directiveData.labels" 
+            chart-options="directiveData.options"></canvas> 
+</section>
