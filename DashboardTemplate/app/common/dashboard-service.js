@@ -20,6 +20,7 @@ module.factory('DashboardService', function (UUIDService, Storage) {
                     
                     id: UUIDService.create(),
 
+
                     // Directive Extension: Pie Chart Widget
                     directiveName: '<pie-chart-widget />',
 
@@ -115,70 +116,9 @@ module.factory('DashboardService', function (UUIDService, Storage) {
                     directiveName: '<table-widget />',
                     headers: ['First Name', 'Last Name', 'User Name'],
                     rows: [
-                        ['Terry', 'Jacobs', '16'],
-                        ['Kenny', 'Vincent', '-2'],
-                        ['Chow', 'Pavarian', '-44']
+                        ['Scott', 'Michaels', '16'],
+                        ['Schrute', 'Dwight', '-44']
                     ]
-                }]
-            },
-            '2': {
-                id: '2',
-                name: 'Search Table',
-                widgets: [{
-                    col: 0,
-                    row: 0,
-                    sizeY: 1,
-                    sizeX: 1,
-
-                    id: UUIDService.create(),
-
-
-                    name: "Search Table",
-                    directiveName: '<search-table />',
-                    headers: ['First Name', 'Last Name', 'User Name'],
-                    rows: [
-                        ['Garrett', 'Wong', '16'],
-                        ['Tim', 'Jacobs', '4']
-                        ['Kenny', 'Vincent', '-2'],
-                    ]
-                }, {
-                    col: 1,
-                    row: 0,
-                    sizeY: 1,
-                    sizeX: 1,
-
-                    id: UUIDService.create(),
-
-
-                    name: "Bubble Chart",
-                    directiveName: '<bubble-chart />',
-
-                    series: ['Series A', 'Series B'],
-                    data: [
-                        [{
-                            x: 40,
-                            y: 10,
-                            r: 20
-                        }],
-                        [{
-                            x: 10,
-                            y: 40,
-                            r: 50
-                        }]
-                    ]
-                }, {
-                    col: 2,
-                    row: 0,
-                    sizeY: 1,
-                    sizeX: 2,
-
-                    id: UUIDService.create(),
-
-
-                    name: "Polar Chart",
-                    directiveName: '<polar-area-chart />',
-                    labels: ["Download Sales", "In-Store Sales", "Mail-Order Sales", "Tele Sales", "Corporate Sales"],
-                    data: [300, 500, 100, 40, 120]
                 }]
             }
         };

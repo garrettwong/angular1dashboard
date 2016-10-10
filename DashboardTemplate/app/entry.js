@@ -3,6 +3,11 @@
 (function () {
     'use strict';
 
-    var module = angular.module('app', ['dashboard']);
+    var module = angular.module('app', [
+        'ngComponentRouter',
+        'Home',
+        'dashboard', 
+        'ngAnimate']);
 
+    module.value('$routerRootComponent', 'app');
 }());

@@ -16,14 +16,15 @@
 
             <ul class="nav navbar-nav">
                 <li class="panel panel-default nav-item">
-                    <a href="~/Home/Index">
+                    
+                    <a ng-link="['Home']">
                         <span class="icon fa fa-home"></span>
                         <span class="title">Home</span>
                     </a>
                 </li>
 
                 <li class="panel panel-default nav-item">
-                    <a href="~/haha">
+                    <a ng-link="['Dashboard']">
                         <span class="icon fa fa-chain-broken"></span>
                         <span class="title">Dashboard</span>
                     </a>
@@ -39,14 +40,14 @@
                         <div class="panel-body">
                             <ul class="nav navbar-nav">
                                 <li>
-                                    <a href="~/Admin/Index">
+                                    <a ng-link="['AdminSettings']">
                                         <i class="icon fa fa-info-circle"></i>
                                         Settings
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="~/Admin/Users">
+                                    <a ng-link="['AdminUser']">
                                         <i class="icon fa fa-plus-square-o"></i>
                                         User
                                     </a>

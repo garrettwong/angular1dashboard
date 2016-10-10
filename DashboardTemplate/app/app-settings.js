@@ -9,10 +9,7 @@
 
         appSettings.title = 'Dashboard';
 
-
-
         return appSettings;
     });
-
-
+    
 }());

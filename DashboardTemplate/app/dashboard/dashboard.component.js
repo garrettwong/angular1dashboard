@@ -5,7 +5,7 @@
         'gridster',
         'ui.bootstrap',
         //'ui.listSorter'
-        'angularCSS',
+        //  'angularCSS', // incompatible with angular_1_router
         'Common',
         'chart.js',
         'easypiechart'
@@ -26,7 +26,7 @@
 
         model.gridsterOptions = {
             margins: [20, 20],
-            columns: 6,
+            columns: 4,
             swapping: true,
             draggable: {
                 handle: '.fa-arrows'
