@@ -3,7 +3,7 @@ Dashboard Template
 
 To add jenkins build and integration.
 
-* GIT Push hook to master branch.  Build is scheduled to run on http://dtmrjenkins.labspan.wdc.com:8080/.
+* GIT Push hook to master branch.  Build is scheduled to run on 
 
 # Dependencies
 > Node (node)
