@@ -24,6 +24,9 @@
             }
         ];
 
+        console.log(model.widgets);
+        
+
         model.gridsterOptions = {
             margins: [20, 20],
             columns: 4,
