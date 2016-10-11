@@ -223,6 +223,37 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\app.component.spec.js" />
+    <Content Include="app\common\dashboard-service.js" />
+    <Content Include="app\common\storage-service.js" />
+    <Content Include="app\common\uuid-service.js" />
+    <Content Include="app\dashboard\add-widget-modal.html" />
+    <Content Include="app\dashboard\dashboard.component.html" />
+    <Content Include="app\dashboard\dashboard.component.js" />
+    <Content Include="app\dashboard\dashboard.css" />
+    <Content Include="app\dashboard\dashboardController.js" />
+    <Content Include="app\dashboard\dashboardService.js" />
+    <Content Include="app\dashboard\widget-cell.component.html" />
+    <Content Include="app\dashboard\widget-cell.component.js" />
+    <Content Include="app\dashboard\widgetModalInstanceController.js" />
+    <Content Include="app\dashboard\widgetService.js" />
+    <Content Include="app\dashboard\widgetSettingsController.js" />
+    <Content Include="app\dashboard\widgets\templates\active-job-chart.html" />
+    <Content Include="app\dashboard\widgets\templates\bar-chart.html" />
+    <Content Include="app\dashboard\widgets\templates\bubble-chart.html" />
+    <Content Include="app\dashboard\widgets\templates\horizontal-line-graph-widget.html" />
+    <Content Include="app\dashboard\widgets\templates\line-graph-widget.html" />
+    <Content Include="app\dashboard\widgets\templates\pie-chart-widget.html" />
+    <Content Include="app\dashboard\widgets\templates\polar-area-chart.html" />
+    <Content Include="app\dashboard\widgets\templates\search-table.html" />
+    <Content Include="app\dashboard\widgets\templates\table-widget.html" />
+    <Content Include="app\dashboard\widgets\templates\tree-table.html" />
+    <Content Include="app\dashboard\widgets\tree-table.js" />
+    <Content Include="app\dashboard\widgets\widget-content.js" />
+    <Content Include="app\dashboard\widgets\widget.css" />
+    <Content Include="app\dashboard\widgets\widgets.js" />
+    <Content Include="app\home\home.component.html" />
+    <Content Include="app\home\home.component.js" />
     <Content Include="app\user-service.js" />
     <Content Include="app\app-settings.js" />
     <Content Include="app\navbar-side.component.html" />
@@ -1636,6 +1667,13 @@
     <Content Include="bower_components\angular-chart.js\dist\angular-chart.js" />
     <Content Include="bower_components\angular-chart.js\dist\angular-chart.min.js" />
     <Content Include="bower_components\angular-chart.js\gulpfile.js" />
+    <Content Include="bower_components\angular-component-router\angular_1_router.js" />
+    <Content Include="bower_components\angular-component-router\ng_route_shim.js" />
+    <Content Include="bower_components\angular-css\angular-css.js" />
+    <Content Include="bower_components\angular-css\angular-css.min.js" />
+    <Content Include="bower_components\angular-css\Gruntfile.js" />
+    <Content Include="bower_components\angular-css\index.js" />
+    <Content Include="bower_components\angular-css\LICENSE.txt" />
     <Content Include="bower_components\angular-dragdrop\karma.conf.js" />
     <Content Include="bower_components\angular-dragdrop\src\angular-dragdrop.js" />
     <Content Include="bower_components\angular-dragdrop\src\angular-dragdrop.min.js" />
@@ -2126,6 +2164,14 @@
     <Content Include="bower_components\angular-messages\angular-messages.js" />
     <Content Include="bower_components\angular-messages\angular-messages.min.js" />
     <Content Include="bower_components\angular-messages\index.js" />
+    <Content Include="bower_components\angular-mocks\angular-mocks.js" />
+    <Content Include="bower_components\angular-mocks\ngAnimateMock.js" />
+    <Content Include="bower_components\angular-mocks\ngMock.js" />
+    <Content Include="bower_components\angular-mocks\ngMockE2E.js" />
+    <Content Include="bower_components\angular-tree-dnd\dist\ng-tree-dnd.css" />
+    <Content Include="bower_components\angular-tree-dnd\dist\ng-tree-dnd.js" />
+    <Content Include="bower_components\angular-tree-dnd\dist\ng-tree-dnd.min.css" />
+    <Content Include="bower_components\angular-tree-dnd\dist\ng-tree-dnd.min.js" />
     <Content Include="bower_components\angular-ui-select\dist\select.css" />
     <Content Include="bower_components\angular-ui-select\dist\select.js" />
     <Content Include="bower_components\angular-ui-select\dist\select.min.css" />
@@ -3827,31 +3873,14 @@
     <Content Include="Content\temp\widget.css" />
     <Content Include="favicon.ico" />
     <Content Include="images\profile.jpg" />
-    <Content Include="js\dashboard\add-widget-modal.html" />
-    <Content Include="js\dashboard\dashboard.css" />
-    <Content Include="js\dashboard\dashboardController.js" />
-    <Content Include="js\dashboard\dashboardService.js" />
-    <Content Include="js\dashboard\widgetModalInstanceController.js" />
-    <Content Include="js\dashboard\widgetService.js" />
-    <Content Include="js\dashboard\widgets\templates\active-job-chart.html" />
-    <Content Include="js\dashboard\widgets\templates\bar-chart.html" />
-    <Content Include="js\dashboard\widgets\templates\bubble-chart.html" />
-    <Content Include="js\dashboard\widgets\templates\horizontal-line-graph-widget.html" />
-    <Content Include="js\dashboard\widgets\templates\line-graph-widget.html" />
-    <Content Include="js\dashboard\widgets\templates\pie-chart-widget.html" />
-    <Content Include="js\dashboard\widgets\templates\polar-area-chart.html" />
-    <Content Include="js\dashboard\widgets\templates\search-table.html" />
-    <Content Include="js\dashboard\widgets\templates\table-widget.html" />
-    <Content Include="js\dashboard\widgets\widget-content.js" />
-    <Content Include="js\dashboard\widgets\widgets.js" />
-    <Content Include="js\dashboard\widget\widget-html-example.html" />
-    <Content Include="js\dashboard\widget\widget.css" />
+    <Content Include="karma.conf.js" />
     <Content Include="Scripts\ai.0.22.19-build00125.js" />
     <Content Include="Scripts\ai.0.22.19-build00125.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Scripts\_references.js" />
+    <Content Include="spec.bundle.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -3861,6 +3890,7 @@
     </Content>
     <Content Include="index.html" />
     <Content Include="Service References\Application Insights\ConnectedService.json" />
+    <Content Include="webpack.config.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -4400,6 +4430,30 @@
     <Content Include="bower_components\underscore\LICENSE" />
     <Content Include="bower_components\underscore\README.md" />
     <Content Include="bower_components\underscore\underscore-min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bower_components\angular-component-router\.bower.json" />
+    <Content Include="bower_components\angular-component-router\bower.json" />
+    <Content Include="bower_components\angular-component-router\README.md" />
+    <Content Include="bower_components\angular-css\.bower.json" />
+    <Content Include="bower_components\angular-css\bower.json" />
+    <Content Include="bower_components\angular-css\README.md" />
+    <Content Include="bower_components\angular-mocks\.bower.json" />
+    <Content Include="bower_components\angular-mocks\bower.json" />
+    <Content Include="bower_components\angular-mocks\LICENSE.md" />
+    <Content Include="bower_components\angular-mocks\package.json" />
+    <Content Include="bower_components\angular-mocks\README.md" />
+    <Content Include="bower_components\angular-tree-dnd\.bower.json" />
+    <Content Include="bower_components\angular-tree-dnd\bower.json" />
+    <Content Include="bower_components\angular-tree-dnd\CHANGELOG.md" />
+    <Content Include="bower_components\angular-tree-dnd\dist\ng-tree-dnd.min.js.map" />
+    <Content Include="bower_components\angular-tree-dnd\DOCUMENTS.md" />
+    <Content Include="bower_components\angular-tree-dnd\LICENSE" />
+    <Content Include="bower_components\angular-tree-dnd\package.json" />
+    <Content Include="bower_components\angular-tree-dnd\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".babelrc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
