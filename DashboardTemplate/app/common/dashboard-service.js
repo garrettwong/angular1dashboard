@@ -1,10 +1,17 @@
+// module: 'Common'
 var module = angular.module('Common');
 
+// in charge of creating dashboard WIDGET SEED DATA
+// injects UUIDService for unique ID generation and Storage for saving widget updates
 module.factory('DashboardService', function (UUIDService, Storage) {
     var dashboardService = {};
 
     var key = '_dashboard';
 
+    // NOTE: revisit the way a directive or component is registered with the application
+    // we want to minimize the data injected from the transcluded scope 
+    // into the component or directive.  the component should be fully responsible for
+    // getting and receiving this data
     dashboardService.getDefaultDashboardData = function () {
         var data = Storage.get(key);
 
@@ -15,7 +22,6 @@ module.factory('DashboardService', function (UUIDService, Storage) {
             sizeX: 1,
 
             id: UUIDService.create(),
-
 
             // Directive Extension: Pie Chart Widget
             directiveName: '<pie-chart-widget />',
@@ -34,7 +40,6 @@ module.factory('DashboardService', function (UUIDService, Storage) {
                 scaleLength: 0,
                 lineCap: 'circle'
             }
-
         }, {
             col: 1,
             row: 1,
@@ -42,8 +47,6 @@ module.factory('DashboardService', function (UUIDService, Storage) {
             sizeX: 1,
 
             id: UUIDService.create(),
-
-
 
             // Directive Extension: Pie Chart Widget
             directiveName: '<horizontal-line-chart />',
@@ -64,7 +67,6 @@ module.factory('DashboardService', function (UUIDService, Storage) {
             sizeX: 1,
 
             id: UUIDService.create(),
-
 
             name: "Line Graph",
 
@@ -107,7 +109,6 @@ module.factory('DashboardService', function (UUIDService, Storage) {
 
             id: UUIDService.create(),
 
-
             name: "Data Table Widget",
             directiveName: '<table-widget />',
             headers: ['First Name', 'Last Name', 'User Name'],
@@ -119,7 +120,9 @@ module.factory('DashboardService', function (UUIDService, Storage) {
 
     };
 
-    // updates local storage
+
+    // save updates in local storage (user-centric function).  consider moving the dashboard 
+    // display configurations to an actual database which stores dashboard view on a per-user basis
     dashboardService.update = function (dashboardData) {
         Storage.set(key, dashboardData);
     };

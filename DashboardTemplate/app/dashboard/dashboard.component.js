@@ -1,32 +1,25 @@
 ﻿(function () {
     'use strict';
 
+    // declare module
     var module = angular.module('dashboard', [
         'gridster',
         'ui.bootstrap',
-        //'ui.listSorter'
-        //  'angularCSS', // incompatible with angular_1_router
         'Common',
         'chart.js',
-        'easypiechart'
+        'easypiechart',
+
+        //  'angularCSS', // throws error with angular_1_router
     ]);
 
     function controller($scope, $uibModal, UUIDService, DashboardService) {
+        // set model to this
         var model = this;
 
-        model.widgets = DashboardService.getDefaultDashboardData() || [
-            {
-                "sizeX": 1,
-                "sizeY": 1,
-                "id": "1dabb5e7-c72d-42ac-84e2-79c51360f2c2",
-                "name": "<pie-chart--widget />",
-                "directiveName": "<pie-chart-widget />"
-            }
-        ];
+        // set default angular dashboard cell data
+        model.widgets = DashboardService.getDefaultDashboardData();
 
-        console.log(model.widgets);
-        
-
+        // declare angular gridster options
         model.gridsterOptions = {
             margins: [20, 20],
             columns: 4,
@@ -36,29 +29,33 @@
             }
         };
 
+        // open the add new tile modal window
         model.openAddNewTile = function () {
             var modalInstance = $uibModal.open({
                 animation: true,
                 templateUrl: '/app/dashboard/add-widget-modal.html',
+                // this controller is defined previously and is the mediator between the current controller and modal
                 controller: 'WidgetModalInstanceCtrl',
                 size: 'lg',
-                resolve: {
-
-                }
+                resolve: {}
             });
         };
 
-        $scope.$on('widgetDirectiveNameReceived', function (eventName, widgetDirectiveName) {
-            console.log(eventName, widgetDirectiveName);
-
+        // use a broadcast receive event to get the data from the child modal controller
+        // this is necessary as i'm not using the button callback to propagate the data from
+        // the modal to this controller
+        $scope.$on('widgetDirectiveNameReceived', function (eventName, widgetDirectiveName) {           
             model.addWidget(widgetDirectiveName);
         });
 
-        model.clear = function () {
+        // clears all widgets
+        model.clearAllWidgets = function () {
             model.widgets = [];
+
+            DashboardService.update(model.widgets);
         };
 
-        // add widgets
+        // adds a new widget based on a directiveName. called by the child modal window
         model.addWidget = function (directiveName) {
             var newWidget = {
                 sizeX: 1,
@@ -67,10 +64,8 @@
             };
 
             switch (directiveName) {
-                /* Pie Charts  */
                 case '<pie-chart-widget />':
                     newWidget = angular.extend(newWidget, {
-                        // Directive Extension: Pie Chart Widget
                         directiveName: '<pie-chart-widget />',
 
                         name: "Users",
@@ -214,18 +209,18 @@
                     break;
             }
 
-            console.log(newWidget);
-
+            // append to the modal widget window
             model.widgets.push(newWidget);
 
             DashboardService.update(model.widgets);
         };
     }
 
+    // export component dashboard
     module.component('dashboard', {
         templateUrl: "/app/dashboard/dashboard.component.html",
         controllerAs: 'model',
         controller: ['$scope', '$uibModal', 'UUIDService', 'DashboardService', controller],
-        css: '/app/dashboard/dashboard.css'
+        css: '/app/dashboard/dashboard.css' // this is what angular-css should handle, but it's not included
     });
 })();

@@ -1,6 +1,10 @@
 ﻿(function () {
     var module = angular.module('dashboard');
 
+    // this factory is in charge of holding the hardcoded widget data
+    // title, imageUrl, and description are metadata
+    // widgetDirectiveName is the actual DOM element and must be backed by either a component
+    // or a directive
     module.factory('WidgetService', function () {
         var widgetService = {};
 
@@ -59,5 +63,4 @@
 
         return widgetService;
     });
-
 })();

@@ -1,23 +1,28 @@
 ﻿<div class="app-container {{ model.navbarSideExpanded }}">
     <div class="row content-container">
 
-        <navbar-top navbar-side-expanded="model.navbarSideExpanded" 
+        <!-- navbar component -->
+        <navbar-top navbar-side-expanded="model.navbarSideExpanded"
                     on-view-change="model.navbarSideExpanded = $event.navbarSideExpanded">
         </navbar-top>
 
+        <!-- navbar side component -->
         <navbar-side></navbar-side>
 
+        <!-- main body -->
         <div class="container-fluid">
             <div class="side-body">
 
-                <!-- Main Content -->
-                <!--<main-view></main-view>-->
-
-
-                <a ng-link="['Home']">Movies</a>
-                <a ng-link="['Dashboard']">Movies</a>
-
                 <ng-outlet></ng-outlet>
+
+                <!--
+                    <ng-outlet /> corresponds to angular_1_router which is deprecated
+
+                    equivalent of ui-view from ui-router: this is where the current template
+                    which matches the route parameters gets rendered.
+
+                    when moving this to ui-router, use <ui-view></ui-view>
+                -->
 
             </div>
         </div>

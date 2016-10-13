@@ -3,28 +3,30 @@
     
     var module = angular.module('dashboard');
 
+    // Widget Cell Container
     function controller($uibModal) {
         var model = this;
 
-        console.log(model);
-
+        // on trash can click
 	    model.remove = function (widget) {
-            // send a remove request to the dashboard 
+	        alert('remove clicked');
 
-            console.log('remove called to splice widgets', widget, model.dashboard);
+	        // let's figure out what we need to do for model.dashboard
+	        console.log(model);
+
+
+	        console.log('remove called to splice widgets', widget, model.dashboard);
 
 	        model.dashboard.widgets.splice($scope.dashboard.widgets.indexOf(widget), 1);
 
 	        DashboardService.update(model.dashboards);
 	    };
 
-
+        // on cogs click
         model.openSettings = function () {
-	        //     templateUrl: '/app/dashboard/add-widget-modal.html', //js/common/gridLayout/widget-settings.html'
             var modalInstance = $uibModal.open({
                 animation: true,
-                // scope: model,
-                templateUrl: '/app/dashboard/add-widget-modal.html',
+                templateUrl: '/app/dashboard/widgets/widget-settings.html',
                 controller: 'WidgetModalInstanceCtrl',
                 size: 'lg',
                 resolve: {
@@ -36,20 +38,19 @@
 
 	        modalInstance.result.then(function (job) {
 	            model.selected = job;
-
-	            console.log(job);
-
 	        }, function () {
-
+                
 	        });
         };
     }
 
+    // export component
     module.component('widgetCell', {
         templateUrl: "/app/dashboard/widget-cell.component.html",
         controllerAs: 'model',
         controller: ['$uibModal', controller],
 
+        // bind to the widget property
         bindings: {
             widget: '<'
         }

@@ -8,7 +8,7 @@
             </div>
 
             <div class="pull-right">
-                <a href="javascript:;" title="settings" ng-click="model.openSettings(widget)">
+                <a href="javascript:;" title="settings" ng-click="model.openSettings(model.widget)">
                     <i class="fa fa-cog"></i>
                 </a>
 
@@ -17,7 +17,6 @@
                 </a>
             </div>
         </div>
-
 
         <!--
             change this to a template conditional:
@@ -28,6 +27,5 @@
         <widget-content directive-name="model.widget.directiveName"
                         directive-data="model.widget"
                         ng-if="model.widget.directiveName"></widget-content>
-
     </div>
 </div>

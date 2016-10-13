@@ -1,22 +1,15 @@
-﻿var app = angular.module('dashboard');
+﻿/*
+ * Dashboard specific components and widgets should exist here.
+ * 
+ * Consider moving this to a similar model as the NG6-Starter kit, where we import all directives
+ * into a single centralized module: 'Components'
+ */
+var app = angular.module('dashboard');
 
-// super table
-app.directive('testWidget', function () {
-    return {
-        restrict: 'E',
-        replace: true,
-        transclude: true,
 
-        template: '<h1>Testing</h1>',
-
-        link: function(scope, element, attrs) {
-            console.log('testWidget', scope, element);
-
-        }
-    }
-});
-
-// pie charts
+/*
+ * Pie Chart Directive
+ */
 app.directive('pieChartWidget', function () {
     return {
         restrict: 'E',
@@ -26,8 +19,6 @@ app.directive('pieChartWidget', function () {
         templateUrl: '/app/dashboard/widgets/templates/pie-chart-widget.html',
 
         link: function (scope, element) {
-            console.log('pieChartWidget', scope, element, $);
-
             // increment user count on click
             var $userCount = 
             $(element[0]).find('.fs-36');
@@ -40,6 +31,9 @@ app.directive('pieChartWidget', function () {
     };
 });
 
+/*
+ * Active Job Chart Directive
+ */
 app.directive('activeJobChart', function () {
     return {
         restrict: 'E',
@@ -49,9 +43,6 @@ app.directive('activeJobChart', function () {
         templateUrl: '/app/dashboard/widgets/templates/active-job-chart.html',
 
         link: function (scope, element) {
-            console.log('pieChartWidget', scope, element, $);
-
-
             var intervalId = setInterval(function () {
                 scope.directiveData.percent = (++scope.directiveData.percent);
 
@@ -74,11 +65,9 @@ app.directive('activeJobChart', function () {
     };
 });
 
-
-
-
-
-// data passed in through attributes
+/*
+ * Bubble Chart Directive
+ */
 app.directive('bubbleChart', function () {
     return {
         restrict: 'E',
@@ -93,7 +82,10 @@ app.directive('bubbleChart', function () {
     };
 });
 
-// data passed in through attributes
+
+/*
+ * Polar Area Chart Directive
+ */
 app.directive('polarAreaChart', function () {
     return {
         restrict: 'E',
@@ -103,11 +95,14 @@ app.directive('polarAreaChart', function () {
         templateUrl: '/app/dashboard/widgets/templates/polar-area-chart.html',
 
         link: function (scope, element) {
-            console.log(scope);
+            
         }
     };
 });
 
+/*
+ * Line Graph Widget
+ */
 app.directive('lineGraphWidget', function () {
     return {
         restrict: 'E',
@@ -117,11 +112,15 @@ app.directive('lineGraphWidget', function () {
         templateUrl: '/app/dashboard/widgets/templates/line-graph-widget.html',
 
         link: function (scope) {
-            console.log('lineGraphWidget', scope);
+            
         }
     };
 });
 
+
+/*
+ * Table Widget Directive
+ */
 app.directive('tableWidget', function () {
     return {
         restrict: 'E',
@@ -132,12 +131,13 @@ app.directive('tableWidget', function () {
 
         link: function (scope) {
             
-            console.log('dataTableWidget', scope);
         }
     };
 });
 
-// data passed in through attributes
+/*
+ * User Pie Chart Directive
+ */
 app.directive('userPieChart', function () {
     return {
         restrict: 'E',
@@ -147,9 +147,7 @@ app.directive('userPieChart', function () {
         template: '<div easypiechart options="directiveData.options" percent="directiveData.percent" style="position: relative;"><div class="chart-centered"><i class="fa fa-2x {{directiveData.faIcon}}"></i><div>{{directiveData.percent}}%</div></div></div>',
 
         link: function (scope, element) {
-            console.log('pie chart', scope, element, $);
-
-
+            
         }
     };
 });
@@ -180,12 +178,14 @@ app.directive('systemsPieChart', function () {
             console.log('syspiechart', $scope);
         },
         link: function (scope) {
-            console.log('pie chart', scope);
+
         }
     };
 });
 
-
+/*
+ * Horizontal Line Chart Directive
+ */
 app.directive('horizontalLineChart', function ($timeout) {
     return {
         restrict: 'E',
@@ -195,11 +195,14 @@ app.directive('horizontalLineChart', function ($timeout) {
         templateUrl: '/app/dashboard/widgets/templates/horizontal-line-graph-widget.html',
 
         link: function (scope, element, attrs) {
-            console.log('horizontal line chart', scope, element, attrs);
+
         }
     }
 });
 
+/*
+ * Bar Chart Directive
+ */
 app.directive('barChart', function ($timeout) {
     return {
         restrict: 'E',
@@ -222,26 +225,14 @@ app.directive('barChart', function ($timeout) {
               [65, 59, 80, 81, 56, 55, 40],
               [28, 48, 40, 19, 86, 27, 90]
             ];
-
         }
     }
 });
 
-
+/*
+ * Search Table Directive
+ */
 app.directive('searchTable', function ($compile) {
-    /* 
-        example scope:
-        {
-            name: "Search Table",
-            directiveName: '<search-table />',
-            headers: ['First Name', 'Last Name', 'User Name'],
-            rows: [
-                ['Thomas', 'Jones', 'jones_t'],
-                ['Craig', 'Scott', 'scott_c'],
-                ['Lee', 'Sung', 'sung_l']
-            ]
-        }     
-    */
     return {
         restrict: 'E',
         replace: true,
@@ -264,7 +255,6 @@ app.directive('searchTable', function ($compile) {
 
             console.log('searchTable scope done', $compile, scope);
 
-            //angular.element(element[0].querySelector('pie-chart')).html($compile(scope.directiveName)(scope));
             this.loop(scope);
         },
         loop: function (scope) {

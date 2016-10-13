@@ -5,6 +5,15 @@
         </h4>
 
         <div class="btn-group pull-right">
+            <button type="button"
+                    class="btn btn-danger btn-outline"
+                    title="Deletes all widgets"
+                    ng-click="model.clearAllWidgets()">
+                <i class="fa fa-trash-o"></i>
+            </button>
+        </div>
+
+        <div class="btn-group pull-right">
             <button type="button" class="btn btn-primary btn-outline">
                 <i class="fa fa-cog"></i>
             </button>
@@ -18,12 +27,11 @@
                     </a>
                 </li>
             </ul>
-
-            
         </div>
     </div>
 
-    <!-- DashGrid -->
+
+    <!-- Dashboard -->
     <div gridster="model.gridsterOptions">
         <ul>
             <li gridster-item="widget" ng-repeat="widget in model.widgets track by widget.id">
