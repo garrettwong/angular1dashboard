@@ -29,10 +29,11 @@
                             <h4 class="username">{{ model.user.userName }}</h4>
                             <p>{{ model.user.email }}</p>
                             <div class="btn-group margin-bottom-2x" role="group">
-                                <a ng-link="['Dashboard']" class="btn btn-default">
+                                <a ui-sref="users" class="btn btn-default">
                                     <i class="fa fa-user"></i> Profile
                                 </a>
-                                <a ng-link="['Dashboard']" class="btn btn-default">
+                                
+                                <a ui-sref="logout" class="btn btn-default">
                                     <i class="fa fa-sign-out"></i> Logout
                                 </a>
                             </div>

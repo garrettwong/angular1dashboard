@@ -5,6 +5,8 @@
         'ui.router',
         'ngAnimate',
 
+        
+        'Admin',
         'Home',
         'Dashboard']);
 
