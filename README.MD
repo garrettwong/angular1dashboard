@@ -1,9 +1,9 @@
 # Angular 1.5.x Dashboard Template
 
 ## Dependencies
-> node
-> npm
-> bower
+- node
+- npm
+- bower
 
 ## Installing bower
 `npm install -g bower`
