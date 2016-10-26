@@ -4,14 +4,14 @@
     var module = angular.module('Admin');
 
     function controller() {
-        console.log(this.users);
+        console.log(this.user);
     }
 
-    module.component('userlist', {
-        templateUrl: "/app/admin/userlist/userlist.component.html",
+    module.component('user', {
+        templateUrl: "/app/admin/userlist/user.component.html",
         controller: controller,
         bindings: {
-            users: '<'
+            user: '<'
         }
     });
 

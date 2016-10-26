@@ -25,7 +25,25 @@
 
         $stateProvider.state('users', {
             url: '/users',
-            component: 'userlist'
+            component: 'userlist',
+            resolve: {
+                users: function(UserService) {
+                    console.log(UserService);
+                    return UserService.getAll();
+                }
+            }
+        });
+
+        $stateProvider.state('users.user', {
+            url: '/{userId}',
+            component: 'user',
+            resolve: {
+                user: function(users, $stateParams) {
+                    return users.find(function(user) {
+                        return user.id === $stateParams.userId;
+                    });
+                }
+            }
         });
     });
 

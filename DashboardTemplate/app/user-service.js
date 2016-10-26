@@ -4,7 +4,7 @@
     // globals, shared variables
     var module = angular.module('app');
 
-    module.factory('UserService', function () {
+    module.factory('UserService', function ($http) {
         var userService = {};
 
         userService.getCurrentUser = function () {
@@ -16,8 +16,24 @@
             };
         };
 
+        userService.getAll = function () {
+            return $http.get('data/users.json', { cache: true }).then(function (resp) {
+                return resp.data;
+            });
+        };
+
+        userService.getUser = function (id) {
+            function userMatchesParam(user) {
+                return user.id === id;
+            }
+
+            return service.getAll().then(function (users) {
+                return users.find(userMatchesParam)
+            });
+        };
+
         return userService;
     });
 
 
-}());
+} ());

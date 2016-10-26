@@ -24,7 +24,8 @@
     <!-- dashboard widgets -->
     <link href="../app/dashboard/widgets/widget.css" rel="stylesheet" />
 
-    <base href="/">
+    <!-- 2 level nested routing doesn't work when this is on -->
+    <!--<base href="/">-->
 </head>
 
 
@@ -62,6 +63,7 @@
 
     <!-- components -->
     <script src="../app/admin/admin.component.js"></script>
+    <script src="../app/admin/userlist/user.component.js"></script>
     <script src="../app/admin/userlist/userlist.component.js"></script>
     <script src="../app/admin/settings/settings.component.js"></script>
 

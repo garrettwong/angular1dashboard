@@ -1,1 +1,12 @@
-<h1>Hello Userlist</h1>
+<section>
+
+	<ul>
+		<li ng-repeat="user in $ctrl.users">
+			<a ui-sref-active="active" ui-sref="users.user({ userId: user.id })">
+                {{user.name}}
+            </a>
+		</li>
+	</ul>
+
+    <ui-view></ui-view>
+</section>
