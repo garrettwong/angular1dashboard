@@ -6,17 +6,17 @@
 > bower
 
 ## Installing bower
-> `npm install -g bower`
+`npm install -g bower`
 
 ## bower and npm
 npm and bower init has already been run so we can save production and dev dependencies.
 for simplicity, we will just use default dependencies in bower.
 
 Install a new package using
-> `bower install angular-material --save`
+`bower install angular-material --save`
 
 Remove an existing package using
-> `bower uninstall angular-material --save`
+`bower uninstall angular-material --save`
 
 ## Getting started
 ```
