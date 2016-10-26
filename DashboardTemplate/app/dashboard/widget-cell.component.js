@@ -4,7 +4,7 @@
     var module = angular.module('Dashboard');
 
     // Widget Cell Container
-    function controller($uibModal) {
+    function controller($rootScope, $uibModal) {
         var model = this;
 
         // on trash can click
@@ -14,12 +14,7 @@
 	        // let's figure out what we need to do for model.dashboard
 	        console.log(model);
 
-
-	        console.log('remove called to splice widgets', widget, model.dashboard);
-
-	        model.dashboard.widgets.splice($scope.dashboard.widgets.indexOf(widget), 1);
-
-	        DashboardService.update(model.dashboards);
+	        $rootScope.$broadcast('widgetRemoved', widget);
 	    };
 
         // on cogs click
@@ -48,7 +43,7 @@
     module.component('widgetCell', {
         templateUrl: "/app/dashboard/widget-cell.component.html",
         controllerAs: 'model',
-        controller: ['$uibModal', controller],
+        controller: ['$rootScope', '$uibModal', controller],
 
         // bind to the widget property
         bindings: {

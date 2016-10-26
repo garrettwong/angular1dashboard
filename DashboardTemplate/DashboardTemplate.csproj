@@ -231,7 +231,6 @@
     <Content Include="app\dashboard\dashboard.component.html" />
     <Content Include="app\dashboard\dashboard.component.js" />
     <Content Include="app\dashboard\dashboard.css" />
-    <Content Include="app\dashboard\dashboardController.js" />
     <Content Include="app\dashboard\dashboardService.js" />
     <Content Include="app\dashboard\widget-cell.component.html" />
     <Content Include="app\dashboard\widget-cell.component.js" />
@@ -250,6 +249,7 @@
     <Content Include="app\dashboard\widgets\templates\tree-table.html" />
     <Content Include="app\dashboard\widgets\tree-table.js" />
     <Content Include="app\dashboard\widgets\widget-content.js" />
+    <Content Include="app\dashboard\widgets\widget-settings.html" />
     <Content Include="app\dashboard\widgets\widget.css" />
     <Content Include="app\dashboard\widgets\widgets.js" />
     <Content Include="app\home\home.component.html" />

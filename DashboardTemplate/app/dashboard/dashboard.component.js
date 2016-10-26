@@ -8,9 +8,7 @@
         'ui.bootstrap',
         'Common',
         'chart.js',
-        'easypiechart',
-
-        //  'angularCSS', // throws error with angular_1_router
+        'easypiechart'
     ]);
 
     function controller($scope, $uibModal, UUIDService, DashboardService) {
@@ -47,6 +45,11 @@
         // the modal to this controller
         $scope.$on('widgetDirectiveNameReceived', function (eventName, widgetDirectiveName) {           
             model.addWidget(widgetDirectiveName);
+        });
+
+        $scope.$on('widgetRemoved', function (eventName, widget) {
+            model.widgets.splice(model.widgets.indexOf(widget), 1);
+            DashboardService.update(model.widgets);
         });
 
         // clears all widgets
