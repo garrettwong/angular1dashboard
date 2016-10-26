@@ -1,31 +1,27 @@
-Dashboard Template
-#by Garrett Wong
-
-To add jenkins build and integration.
-
-* GIT Push hook to master branch.  Build is scheduled to run on 
+# Dashboard Template
+# NG 1.5.x
 
 # Dependencies
-> Node (node)
-> Node Package Manager (npm)
-> Bower Package Manager (bower)
-> SASS
+> node
+> npm
+> bower
 
-## Installing bower package Manager
+## Installing bower
 > npm install -g bower
 
-## Using bower
-bower init has already been run so we can save production and dev dependencies.
+## bower and npm
+npm and bower init has already been run so we can save production and dev dependencies.
 for simplicity, we will just use default dependencies in bower.
 
-Install package using
+Install a new package using
 > bower install angular-material --save
 
-Remove package using
+Remove an existing package using
 > bower uninstall angular-material --save
 
 ## Getting started
 > npm install
+
 > bower install
 
 
