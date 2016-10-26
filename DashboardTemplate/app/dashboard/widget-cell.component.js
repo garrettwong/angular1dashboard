@@ -4,7 +4,7 @@
     var module = angular.module('Dashboard');
 
     // Widget Cell Container
-    function controller($rootScope, $uibModal) {
+    function controller($rootScope, $scope, $uibModal) {
         var model = this;
 
         // on trash can click
@@ -16,6 +16,18 @@
 
 	        $rootScope.$broadcast('widgetRemoved', widget);
 	    };
+
+        
+        // save the position of the widgets when a widget is dragged
+        $scope.$on('gridster-item-transition-end', function(item) {
+            $rootScope.$broadcast('saveDashboardState');
+        })
+
+        // save the size/position of the widgets when a widget is resized
+        $scope.$on('gridster-item-resized', function(item) {
+            $rootScope.$broadcast('saveDashboardState');
+        })
+
 
         // on cogs click
         model.openSettings = function () {
@@ -43,7 +55,7 @@
     module.component('widgetCell', {
         templateUrl: "/app/dashboard/widget-cell.component.html",
         controllerAs: 'model',
-        controller: ['$rootScope', '$uibModal', controller],
+        controller: ['$rootScope', '$scope', '$uibModal', controller],
 
         // bind to the widget property
         bindings: {

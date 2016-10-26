@@ -245,6 +245,7 @@ app.directive('searchTable', function ($compile) {
                 return !isNaN(parseFloat(n)) && isFinite(n);
             }
         },
+
         link: function (scope) {
 
             scope.update = function (searchTerm) {
@@ -261,7 +262,7 @@ app.directive('searchTable', function ($compile) {
             this.intervalId = setInterval(function () {
                 scope.directiveData.percent = (++scope.directiveData.percent);
 
-                if (scope.directiveData.percent === 100) clearInterval(intervalId);
+                if (scope.directiveData.percent === 100) clearInterval(this.intervalId);
             }, 150);
             
             console.log(scope.directiveData);

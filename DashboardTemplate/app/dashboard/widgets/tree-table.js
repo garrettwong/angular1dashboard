@@ -40,7 +40,7 @@ app.directive('treeTable', function (UUIDService) {
             this.intervalId = setInterval(function () {
                 scope.directiveData.percent = (++scope.directiveData.percent);
 
-                if (scope.directiveData.percent === 100) clearInterval(intervalId);
+                if (scope.directiveData.percent === 100) clearInterval(this.intervalId);
             }, 150);
             
             console.log(scope.directiveData);

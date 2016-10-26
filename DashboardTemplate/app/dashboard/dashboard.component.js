@@ -52,6 +52,11 @@
             DashboardService.update(model.widgets);
         });
 
+        $scope.$on('saveDashboardState', function (eventName) {
+            console.log('saveDashboardState')
+            DashboardService.update(model.widgets);
+        });
+
         // clears all widgets
         model.clearAllWidgets = function () {
             model.widgets = [];
@@ -229,7 +234,6 @@
     });
 
     module.config(function ($stateProvider, $urlRouterProvider) {
-
         $stateProvider
           .state('dashboard', {
               url: '/dashboard',
