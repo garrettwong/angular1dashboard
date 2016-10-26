@@ -258,13 +258,11 @@
     <Content Include="app\app-settings.js" />
     <Content Include="app\navbar-side.component.html" />
     <Content Include="app\navbar-side.component.js" />
-    <Content Include="app\main-view.component.html" />
-    <Content Include="app\main-view.component.js" />
     <Content Include="app\navbar-top.component.html" />
     <Content Include="app\navbar-top.component.js" />
     <Content Include="app\app.component.html" />
     <Content Include="app\app.component.js" />
-    <Content Include="app\entry.js" />
+    <Content Include="app\app.js" />
     <Content Include="bower_components\ace-builds\ChangeLog.txt" />
     <Content Include="bower_components\ace-builds\editor.html" />
     <Content Include="bower_components\ace-builds\kitchen-sink.html" />

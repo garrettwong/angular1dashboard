@@ -1,7 +1,7 @@
 ﻿(function () {
     'use strict';
 
-    var module = angular.module('dashboard');
+    var module = angular.module('Dashboard');
 
     // this acts a modal helper class for editing current widget cell settings
     module.controller('WidgetSettingsCtrl', ['$scope', '$timeout', '$rootScope', '$uibModalInstance',

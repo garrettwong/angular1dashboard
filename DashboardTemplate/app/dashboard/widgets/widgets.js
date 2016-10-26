@@ -4,7 +4,7 @@
  * Consider moving this to a similar model as the NG6-Starter kit, where we import all directives
  * into a single centralized module: 'Components'
  */
-var app = angular.module('dashboard');
+var app = angular.module('Dashboard');
 
 
 /*

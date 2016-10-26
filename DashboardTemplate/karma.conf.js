@@ -9,7 +9,7 @@ module.exports = function(config) {
         "bower_components/angular-component-router/angular_1_router.js",
         "bower_components/angular-animate/angular-animate.js",
 
-        "app/entry.js",
+        "app/app.js",
         "app/**/*.spec.js"
     ],
     exclude: [        

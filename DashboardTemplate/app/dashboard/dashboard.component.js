@@ -2,7 +2,8 @@
     'use strict';
 
     // declare module
-    var module = angular.module('dashboard', [
+    var module = angular.module('Dashboard', [
+        'ui.router',
         'gridster',
         'ui.bootstrap',
         'Common',
@@ -222,5 +223,14 @@
         controllerAs: 'model',
         controller: ['$scope', '$uibModal', 'UUIDService', 'DashboardService', controller],
         css: '/app/dashboard/dashboard.css' // this is what angular-css should handle, but it's not included
+    });
+
+    module.config(function ($stateProvider, $urlRouterProvider) {
+
+        $stateProvider
+          .state('dashboard', {
+              url: '/dashboard',
+              component: 'dashboard'
+          });
     });
 })();

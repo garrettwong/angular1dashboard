@@ -1,4 +1,4 @@
-﻿var app = angular.module('dashboard');
+﻿var app = angular.module('Dashboard');
 
 app.directive('widgetContent', function ($timeout, $compile, $parse) {
     return {

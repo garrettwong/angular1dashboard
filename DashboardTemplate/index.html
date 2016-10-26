@@ -24,17 +24,19 @@
     <!-- dashboard widgets -->
     <link href="../app/dashboard/widgets/widget.css" rel="stylesheet" />
 
-    
+    <base href="/">
 </head>
+
 
 <body ng-app="app" class="anchor-blue">
 
+    <!-- main app entry point -->
     <app></app>
-
+    
 
     <script src="../bower_components/angular/angular.js"></script>
-    <script src="../bower_components/angular-component-router/angular_1_router.js"></script>
-    
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
 
@@ -61,7 +63,7 @@
 
     <!-- home -->
     <script src="../app/home/home.component.js"></script>
-    
+
     <!-- dashboard module -->
     <script src="../app/dashboard/dashboard.component.js"></script>
     <script src="../app/dashboard/widget-cell.component.js"></script>
@@ -72,16 +74,15 @@
     <script src="../app/dashboard/widgetSettingsController.js"></script>
     <script src="../app/dashboard/widgets/widget-content.js"></script>
 
-    
+
     <script src="../app/dashboard/widgets/widgets.js"></script>
     <script src="../app/dashboard/widgets/tree-table.js"></script>
 
     <!-- app module -->
-    <script src="../app/entry.js"></script>
+    <script src="../app/app.js"></script>
     <script src="../app/app.component.js"></script>
     <script src="../app/navbar-top.component.js"></script>
     <script src="../app/navbar-side.component.js"></script>
-    <script src="../app/main-view.component.js"></script>
 
     <script src="../app/app-settings.js"></script>
     <script src="../app/user-service.js"></script>

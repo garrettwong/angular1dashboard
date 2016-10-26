@@ -7,8 +7,6 @@
         var model = this;
 
         model.title = AppSettings.title;
-
-        console.log(model);
     }
 
     module.component("navbarSide", {

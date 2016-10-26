@@ -49,9 +49,9 @@
     "angular-gridster": "^0.13.14",
     "angularjs-nvd3-directives": "^0.0.7",
     "angular-css": "^1.0.8",
-    "angular-component-router": "^0.2.1",
     "angular-mocks": "^1.5.8",
-    "angular-tree-dnd": "^3.0.4"
+    "angular-tree-dnd": "^3.0.4",
+    "angular-ui-router": "^1.0.0-beta.1"
   },
   "resolutions": {
     "Chart.js": "2.x",

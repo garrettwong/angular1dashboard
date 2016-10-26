@@ -1,4 +1,4 @@
-var app = angular.module('dashboard');
+var app = angular.module('Dashboard');
 
 
 app.directive('treeTable', function (UUIDService) {

@@ -1,12 +1,10 @@
 (function() {
     'use strict';
 
-    var homeModule = angular.module('Home', []);
+    var homeModule = angular.module('Home', ['ui.router']);
 
     function controller() {
         var model = this;
-
-
     }
 
     homeModule.component('home', {
@@ -15,5 +13,13 @@
         controller: controller
     });
 
-    
+    homeModule.config(function ($stateProvider, $urlRouterProvider) {
+        $urlRouterProvider.otherwise('/home');
+
+        $stateProvider.state('home', {
+              url: '/home',
+              component: 'home'
+          });
+    });
+
 }());

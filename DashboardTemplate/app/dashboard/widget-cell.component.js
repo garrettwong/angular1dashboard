@@ -1,7 +1,7 @@
 ﻿(function () {
     'use strict';
     
-    var module = angular.module('dashboard');
+    var module = angular.module('Dashboard');
 
     // Widget Cell Container
     function controller($uibModal) {

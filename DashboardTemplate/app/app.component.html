@@ -13,19 +13,11 @@
         <div class="container-fluid">
             <div class="side-body">
 
-                <ng-outlet></ng-outlet>
+                <!--<ui-view></ui-view>-->
+                <dashboard></dashboard>
 
-                <!--
-                    <ng-outlet /> corresponds to angular_1_router which is deprecated
-
-                    equivalent of ui-view from ui-router: this is where the current template
-                    which matches the route parameters gets rendered.
-
-                    when moving this to ui-router, use <ui-view></ui-view>
-                -->
-
+                <ui-view></ui-view>
             </div>
         </div>
-
     </div>
 </div>

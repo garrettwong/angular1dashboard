@@ -1,6 +1,6 @@
 ﻿(function () {
 
-    var module = angular.module('dashboard');
+    var module = angular.module('Dashboard');
 
     module.controller('WidgetModalInstanceCtrl', function ($scope, $uibModalInstance, $rootScope, WidgetService) {
 

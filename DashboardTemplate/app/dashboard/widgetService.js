@@ -1,5 +1,5 @@
 ﻿(function () {
-    var module = angular.module('dashboard');
+    var module = angular.module('Dashboard');
 
     // this factory is in charge of holding the hardcoded widget data
     // title, imageUrl, and description are metadata

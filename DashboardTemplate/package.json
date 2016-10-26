@@ -20,6 +20,7 @@
   "dependencies": {
     "angular": "^1.5.8",
     "angular-mocks": "^1.5.8",
+    "angular-ui-router": "^1.0.0-beta.1",
     "autoprefixer": "^6.5.0",
     "babel-core": "^6.17.0",
     "babel-loader": "^6.2.5",
@@ -29,12 +30,10 @@
     "copy-webpack-plugin": "^3.0.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "html-webpack-plugin": "^2.22.0",
-    
     "jasmine-core": "^2.4.1",
     "karma": "^0.13.22",
     "karma-chrome-launcher": "^0.2.3",
     "karma-jasmine": "^0.3.8",
-    
     "lite-server": "^2.2.2",
     "mocha": "^2.3.0",
     "raw-loader": "^0.5.1",
