@@ -1,7 +1,6 @@
-# Dashboard Template
-# NG 1.5.x
+# Angular 1.5.x Dashboard Template
 
-# Dependencies
+## Dependencies
 > node
 > npm
 > bower
